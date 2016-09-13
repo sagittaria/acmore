@@ -9,5 +9,6 @@ public class Main0{
       b = in.nextInt();
       System.out.println(a + b);
     }
+    in.close();
   }
 }
