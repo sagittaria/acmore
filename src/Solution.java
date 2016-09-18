@@ -2,9 +2,151 @@ import java.util.*;
 import java.io.*;
 
 class Solution{
-//-------------------------------------------------------    
+
+}
+
+//其实没什么记录价值	
+/*public static void main(String[] args) {
+    Scanner in = new Scanner(System.in);
+    int n = in.nextInt();
+    int arr[] = new int[n];
+    int neg=0,zero=0,pos=0;
+    for(int arr_i=0; arr_i < n; arr_i++){
+        arr[arr_i] = in.nextInt();
+        neg=neg+((arr[arr_i]<0) ? 1:0);
+        zero=zero+((arr[arr_i]==0) ? 1:0);
+        pos=pos+((arr[arr_i]>0) ? 1:0);
+    }
+    System.out.printf("%.6f\n%.6f\n%.6f",(double)pos/n,(double)zero/n,(double)neg/n);
+    // (double)pos/n 不要写成 (double)(pos/n)
+}*/
+
+//-------------------------------------------------------
+//来自https://www.hackerrank.com/challenges/s10-interquartile-range	
+	/*public static void main(String[] args) {
+  	Scanner sc=new Scanner(System.in);
+  	int n=sc.nextInt();
+  	int[] x=new int[n];
+  	int[] f=new int[n];
+  	int sum=0;
+  	for(int i=0;i<n;i++){
+  		x[i]=sc.nextInt();
+  	}
+  	for(int i=0;i<n;i++){
+  		f[i]=sc.nextInt();
+  		sum+=f[i];
+  	}
+  	sc.close();
+  	int[] s=new int[sum];
+  	int sIndex=0;
+  	for(int i=0;i<n;i++){
+  		for(int j=0;j<f[i];j++){
+  			s[sIndex]=x[i];
+  			sIndex=sIndex+1;
+  		}
+  	}
+  	//System.out.println(Arrays.toString(s));
+  	Arrays.sort(s);
+  	int[] sl=new int[sum/2];
+      int[] sh=new int[sum/2];
+      int q1=0,q3=0;  
+      for(int i=0;i<sum/2;i++){
+      	sl[i]=s[i];
+      	if(sum%2==1){
+      		sh[i]=s[i+sum/2+1];
+      	}else{
+      		sh[i]=s[i+sum/2];
+      	}        	
+      }
+      q1=getMedian(sl,sum/2);
+      q3=getMedian(sh,sum/2);
+      System.out.printf("%.1f",(double)(q3-q1));
+  }
+  
+  public static int getMedian(int[] c, int l){
+    	int med=0;
+    	if(l%2==0){
+    		med=(c[l/2] + c[l/2-1])/2;
+    	}else{
+    		med=c[(l-1)/2];
+    	}    	
+    	return med;
+    }*/
+
+//-------------------------------------------------------
+//不是笔记，练手感的。	
+/*	static private int B,H;//这里两行前的static都是必须的
+	static boolean flag=false;//否则错误提示：Cannot make a static reference to the non-static field flag
+	static{
+	    Scanner sc=new Scanner(System.in);
+	    B = sc.nextInt();
+	    H = sc.nextInt();
+	    if(B>0 && H>0){
+	        flag=true;
+	    }else{
+	       System.out.println("java.lang.Exception: Breadth and height must be positive"); 
+	    }
+	}
+	
+	public static void main(String[] args){
+		if(flag){
+			int area=B*H;
+			System.out.print(area);
+		}
+	}*/
+
+//-------------------------------------------------------	
+//来自https://www.hackerrank.com/challenges/java-end-of-file	
+/*	public static void main(String[] args){
+		Scanner sc=new Scanner(System.in);
+		int x=1;
+		while(sc.hasNextLine()){
+			System.out.println(x++ + " " + sc.nextLine());
+		}
+		//System.out.println("while finished.");// ctrl+z(win7) to break [while]
+	}*/
+
+//-------------------------------------------------------
+//https://www.hackerrank.com/challenges/s10-quartiles	
+/*    public static void main(String[] args) {
+      Scanner sc=new Scanner(System.in);
+      int n=sc.nextInt();
+      int[] a=new int[n];
+      int[] al=new int[n/2];
+      int[] ah=new int[n/2];
+      for(int i=0;i<n;i++){
+          a[i]=sc.nextInt();
+      }
+      Arrays.sort(a);
+      int q1=0,q2=0,q3=0;  
+      for(int i=0;i<n/2;i++){
+      	al[i]=a[i];
+      	if(n%2==1){
+      		ah[i]=a[i+n/2+1];
+      	}else{
+      		ah[i]=a[i+n/2];
+      	}        	
+      }
+      q1=getMedian(al,n/2);
+      q2=getMedian(a,n);
+      q3=getMedian(ah,n/2);
+      System.out.println(q1);
+      System.out.println(q2);
+      System.out.println(q3);
+  }
+  public static int getMedian(int[] c, int l){
+  	int med=0;
+  	if(l%2==0){
+  		med=(c[l/2] + c[l/2-1])/2;
+  	}else{
+  		med=c[(l-1)/2];
+  	}    	
+  	return med;
+  }*/
+
+//-------------------------------------------------------
 //来自https://www.hackerrank.com/challenges/s10-basic-statistics
-	public static void main(String[] args) {
+/*	public static void main(String[] args) {
 		Scanner in = new Scanner(System.in);
 		int n = in.nextInt();
 		int sum = 0;
@@ -42,8 +184,8 @@ class Solution{
 		}//因为a已经是有序的，如[1,1,1,2,2,2,2,2,4,4,4]，count就是[3,3,3,5,5,5,5,5,3,3,3]
 		//拿到“第一个”最大的值的下标（也就是count里第一个“5”的下标）即可。
 		System.out.println(a[max_occurrency_index]);//mode		
-	}
-}
+	}*/
+
 //-------------------------------------------------------    
 //来自https://www.hackerrank.com/challenges/diagonal-difference
 /*    public static void main(String[] args) {
