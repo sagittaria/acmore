@@ -5,6 +5,77 @@ class Solution{
 
 }
 
+//-------------------------------------标准差
+//来自https://www.hackerrank.com/challenges/s10-standard-deviation	
+	/*public static void main(String[] args) {
+		Scanner in = new Scanner(System.in);
+		int n = in.nextInt();
+		double sum=0.0;
+		int[] a=new int[n];
+		for(int i=0;i<n;i++){
+			a[i]=in.nextInt();
+			sum+=a[i];
+		}
+		double mean=sum/n;
+		double fenmu=0.0;
+		for(int i=0;i<n;i++){
+			fenmu+=(a[i]-mean)*(a[i]-mean);
+		}
+		System.out.printf("%.1f",Math.sqrt(fenmu/n));
+  }*/
+
+//-------------------------------------Calendar 留意 getInstance、get和set方法；另，数组是{}！
+//来自https://www.hackerrank.com/challenges/30-review-loop
+  /*public static void main(String[] args) {
+      Scanner in = new Scanner(System.in);
+      String month = in.next();
+      String day = in.next();
+      String year = in.next();
+      int mm=Integer.parseInt(month)-1;
+      int dd=Integer.parseInt(day);
+      int yy=Integer.parseInt(year);
+      Calendar c = Calendar.getInstance();
+      c.set(yy, mm, dd);
+      String[] weekdays={"SUNDAY","MONDAY","TUESDAY","WEDNESDAY","THURSDAY","FRIDAY","SATURDAY"};
+      System.out.println(weekdays[c.get(Calendar.DAY_OF_WEEK)-1]);
+  }*/
+
+//-------------------------------------------------------s.charAt(j) 取字符串里某个位置的字符
+//来自https://www.hackerrank.com/challenges/30-review-loop
+/*    public static void main(String[] args) {
+  	Scanner in = new Scanner(System.in);
+      int t = in.nextInt();
+      in.nextLine();
+      for(int i=0;i<t;i++){
+      	String s=in.nextLine();
+      	for(int j=0;j<s.length();j+=2){
+      		System.out.printf("%s",s.charAt(j));
+      	}
+      	System.out.print(" ");
+      	for(int j=1;j<s.length();j+=2){
+      		System.out.printf("%s",s.charAt(j));
+      	}
+      	System.out.print("\n");
+      }        
+      in.close();
+  }*/
+
+//-------------------------------------------------------
+//来自https://www.hackerrank.com/challenges/staircase
+  /*public static void main(String[] args) {
+      Scanner in = new Scanner(System.in);
+      int n = in.nextInt();
+      for(int i=0;i<n;i++){
+      	for(int j=0;j<n-i-1;j++){
+      		System.out.print(" ");
+      	}
+      	for(int m=0;m<i+1;m++){
+      		System.out.print("#");
+      	}
+      	System.out.println();
+      }
+  }*/
+
 //其实没什么记录价值	
 /*public static void main(String[] args) {
     Scanner in = new Scanner(System.in);
